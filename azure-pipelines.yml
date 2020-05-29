@@ -57,5 +57,5 @@ jobs:
 
   - task: GithubRelease@0
     inputs:
-      githubConnection: 'hho2002'
+      githubConnection: 'hho2002pat'
       assets: '$(System.ArtifactsDirectory)/**/*.zip'
