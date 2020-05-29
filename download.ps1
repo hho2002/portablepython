@@ -39,15 +39,15 @@ if ($env:PYVERSION -like "3.*") {
 } else {
     Write-Output "Removing existing Python installation if there is one"
     Start-Process -FilePath msiexec -ArgumentList "/qn","/x","$target" -Wait
-    
+
     Write-Output "Installing Python to $targetdir"
     Start-Process -FilePath msiexec -ArgumentList "/qn","/i","$target","/L*V","$logfile","TARGETDIR=$targetdir","ADDLOCAL=DefaultFeature,TclTk,Documentation,Tools","REMOVE=Extensions,Testsuite" -Wait
-    
+
     Write-Output "Removing .pyc files"
     Get-ChildItem -Include "*.pyc" -Recurse -Force | Remove-Item -Force
 }
 
-if (Test-Path $targetdir\Scripts) {
-    Write-Output "Removing $targetdir\Scripts"
-    Remove-Item -Recurse -Force $targetdir\Scripts
-}
+#if (Test-Path $targetdir\Scripts) {
+#    Write-Output "Removing $targetdir\Scripts"
+#    Remove-Item -Recurse -Force $targetdir\Scripts
+#}
