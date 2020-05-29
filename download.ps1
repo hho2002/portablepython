@@ -47,7 +47,7 @@ if ($env:PYVERSION -like "3.*") {
     Get-ChildItem -Include "*.pyc" -Recurse -Force | Remove-Item -Force
 }
 
-#if (Test-Path $targetdir\Scripts) {
-#    Write-Output "Removing $targetdir\Scripts"
-#    Remove-Item -Recurse -Force $targetdir\Scripts
-#}
+if (Test-Path $targetdir\Scripts) {
+    Write-Output "Removing $targetdir\Scripts"
+    Remove-Item -Recurse -Force $targetdir\Scripts
+}
