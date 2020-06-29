@@ -4,25 +4,25 @@ jobs:
   strategy:
     matrix:
       PY377_32:
-        PYVERSION: 3.7.7
+        PYVERSION: 3.7.8
         PYARCH: 32
       PY377_64:
-        PYVERSION: 3.7.7
+        PYVERSION: 3.7.8
         PYARCH: 64
 
-      PY383_32:
-        PYVERSION: 3.8.3
-        PYARCH: 32
-      PY383_64:
-        PYVERSION: 3.8.3
-        PYARCH: 64
-
-      PY2718_32:
-        PYVERSION: 2.7.18
-        PYARCH: 32
-      PY2718_64:
-        PYVERSION: 2.7.18
-        PYARCH: 64
+#      PY383_32:
+#        PYVERSION: 3.8.3
+#        PYARCH: 32
+#      PY383_64:
+#        PYVERSION: 3.8.3
+#        PYARCH: 64
+#
+#      PY2718_32:
+#        PYVERSION: 2.7.18
+#        PYARCH: 32
+#      PY2718_64:
+#        PYVERSION: 2.7.18
+#        PYARCH: 64
 
   pool:
     vmImage: 'vs2017-win2016'
