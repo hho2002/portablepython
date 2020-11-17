@@ -3,6 +3,13 @@ jobs:
 
   strategy:
     matrix:
+#      PY379_32:
+#        PYVERSION: 3.7.9
+#        PYARCH: 32
+#      PY379_64:
+#        PYVERSION: 3.7.9
+#        PYARCH: 64
+
       PY386_32:
         PYVERSION: 3.8.6
         PYARCH: 32
