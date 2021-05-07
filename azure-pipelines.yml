@@ -11,17 +11,17 @@ jobs:
 #        PYARCH: 64
 
       PY386_32:
-        PYVERSION: 3.8.9
+        PYVERSION: 3.8.10
         PYARCH: 32
       PY386_64:
-        PYVERSION: 3.8.9
+        PYVERSION: 3.8.10
         PYARCH: 64
 
       PY390_32:
-        PYVERSION: 3.9.3
+        PYVERSION: 3.9.5
         PYARCH: 32
       PY390_64:
-        PYVERSION: 3.9.3
+        PYVERSION: 3.9.5
         PYARCH: 64
 
   pool:
