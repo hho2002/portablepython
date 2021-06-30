@@ -17,11 +17,18 @@ jobs:
 #        PYVERSION: 3.8.10
 #        PYARCH: 64
 
-      PY390_32:
-        PYVERSION: 3.9.6
+#      PY390_32:
+#        PYVERSION: 3.9.6
+#        PYARCH: 32
+#      PY390_64:
+#        PYVERSION: 3.9.6
+#        PYARCH: 64
+
+      PY3100_32:
+        PYVERSION: 3.10.0b3
         PYARCH: 32
-      PY390_64:
-        PYVERSION: 3.9.6
+      PY3100_64:
+        PYVERSION: 3.10.0b3
         PYARCH: 64
 
   pool:
