@@ -1,14 +1,14 @@
 if ($env:PYVERSION -like "3.*") {
     if ($env:PYARCH -eq "64") {
-        $filename = "python-${env:PYVERSION}-amd64.exe"
+        $filename = "python-${env:PYNAME}-amd64.exe"
     } else {
-        $filename = "python-${env:PYVERSION}.exe"
+        $filename = "python-${env:PYNAME}.exe"
     }
 } else {
     if ($env:PYARCH -eq "64") {
-        $filename = "python-${env:PYVERSION}.amd64.msi"
+        $filename = "python-${env:PYNAME}.amd64.msi"
     } else {
-        $filename = "python-${env:PYVERSION}.msi"
+        $filename = "python-${env:PYNAME}.msi"
     }
 }
 
