@@ -14,7 +14,7 @@ if ($env:PYVERSION -like "3.*") {
 
 $url = "https://www.python.org/ftp/python/${env:PYVERSION}/${filename}"
 $target = $PSScriptRoot + "\" + $filename
-$targetdir = $PSScriptRoot + "\Python-${env:PYVERSION}-${env:PYARCH}"
+$targetdir = $PSScriptRoot + "\Python-${env:PYNAME}-${env:PYARCH}"
 $logfile = $PSScriptRoot + "\install.log"
 
 Write-Output "URL: $url"

@@ -45,18 +45,18 @@ jobs:
   - task: PublishPipelineArtifact@0
     inputs:
       targetPath: 'install.log'
-      artifactName: '$(PYVERSION)-$(PYARCH)-install.log'
+      artifactName: '$(PYNAME)-$(PYARCH)-install.log'
 
   - task: ArchiveFiles@2
     inputs:
-      rootFolderOrFile: 'Python-$(PYVERSION)-$(PYARCH)'
+      rootFolderOrFile: 'Python-$(PYNAME)-$(PYARCH)'
       archiveType: 'zip'
-      archiveFile: '$(Build.ArtifactStagingDirectory)/Python-$(PYVERSION)-$(PYARCH).zip'
+      archiveFile: '$(Build.ArtifactStagingDirectory)/Python-$(PYNAME)-$(PYARCH).zip'
 
   - task: PublishPipelineArtifact@0
     inputs:
-      targetPath: '$(Build.ArtifactStagingDirectory)/Python-$(PYVERSION)-$(PYARCH).zip'
-      artifactName: '$(PYVERSION)-$(PYARCH)'
+      targetPath: '$(Build.ArtifactStagingDirectory)/Python-$(PYNAME)-$(PYARCH).zip'
+      artifactName: '$(PYNAME)-$(PYARCH)'
 
 - job: release
   dependsOn: build
