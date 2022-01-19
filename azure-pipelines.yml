@@ -3,36 +3,36 @@ jobs:
 
   strategy:
     matrix:
-#      PY379_32:
+#      PY37_32:
 #        PYVERSION: 3.7.9
 #        PYARCH: 32
-#      PY379_64:
+#      PY37_64:
 #        PYVERSION: 3.7.9
 #        PYARCH: 64
 
-#      PY386_32:
+#      PY38_32:
 #        PYVERSION: 3.8.10
 #        PYARCH: 32
-#      PY386_64:
+#      PY38_64:
 #        PYVERSION: 3.8.10
 #        PYARCH: 64
 
-#      PY397_32:
-#        PYVERSION: 3.9.9
-#        PYNAME: 3.9.9
-#        PYARCH: 32
-#      PY397_64:
-#        PYVERSION: 3.9.9
-#        PYNAME: 3.9.9
-#        PYARCH: 64
-
-      PY3100_32:
-        PYVERSION: 3.10.1
-        PYNAME: 3.10.1
+      PY39_32:
+        PYVERSION: 3.9.10
+        PYNAME: 3.9.10
         PYARCH: 32
-      PY3100_64:
-        PYVERSION: 3.10.1
-        PYNAME: 3.10.1
+      PY39_64:
+        PYVERSION: 3.9.10
+        PYNAME: 3.9.10
+        PYARCH: 64
+
+      PY310_32:
+        PYVERSION: 3.10.2
+        PYNAME: 3.10.2
+        PYARCH: 32
+      PY310_64:
+        PYVERSION: 3.10.2
+        PYNAME: 3.10.2
         PYARCH: 64
 
   pool:
