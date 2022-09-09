@@ -21,15 +21,15 @@ jobs:
 #        PYVERSION: 3.9.13
 #        PYNAME: 3.9.13
 #        PYARCH: 32
+#      PY39_64:
+#        PYVERSION: 3.9.13
+#        PYNAME: 3.9.13
+#        PYARCH: 64
+
 #      PY310_32:
 #        PYVERSION: 3.10.6
 #        PYNAME: 3.10.6
 #        PYARCH: 32
-
-      PY39_64:
-        PYVERSION: 3.9.14
-        PYNAME: 3.9.14
-        PYARCH: 64
 
       PY310_64:
         PYVERSION: 3.10.7
