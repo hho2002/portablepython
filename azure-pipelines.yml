@@ -31,15 +31,15 @@ jobs:
 #        PYNAME: 3.10.6
 #        PYARCH: 32
 
-      PY310_64:
-        PYVERSION: 3.10.7
-        PYNAME: 3.10.7
-        PYARCH: 64
-
-#      PY311_64:
-#        PYVERSION: 3.11.0
-#        PYNAME: 3.11.0rc1
+#      PY310_64:
+#        PYVERSION: 3.10.7
+#        PYNAME: 3.10.7
 #        PYARCH: 64
+
+      PY311_64:
+        PYVERSION: 3.11.0
+        PYNAME: 3.11.0rc2
+        PYARCH: 64
 
   pool:
     vmImage: 'windows-latest'
