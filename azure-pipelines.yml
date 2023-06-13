@@ -27,18 +27,17 @@ jobs:
 #        PYARCH: 64
 
 #      PY310_32:
-#        PYVERSION: 3.10.8
-#        PYNAME: 3.10.8
+#        PYVERSION: 3.10.11
+#        PYNAME: 3.10.11
 #        PYARCH: 32
-
-      PY310_64:
-        PYVERSION: 3.10.11
-        PYNAME: 3.10.11
-        PYARCH: 64
+#      PY310_64:
+#        PYVERSION: 3.10.11
+#        PYNAME: 3.10.11
+#        PYARCH: 64
 
       PY311_64:
-        PYVERSION: 3.11.3
-        PYNAME: 3.11.3
+        PYVERSION: 3.11.4
+        PYNAME: 3.11.4
         PYARCH: 64
 
   pool:
