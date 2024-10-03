@@ -41,8 +41,8 @@ jobs:
 #        PYARCH: 64
 
       PY312_64:
-        PYVERSION: 3.12.4
-        PYNAME: 3.12.4
+        PYVERSION: 3.12.7
+        PYNAME: 3.12.7
         PYARCH: 64
 
   pool:
