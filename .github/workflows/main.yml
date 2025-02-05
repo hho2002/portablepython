@@ -42,7 +42,7 @@ jobs:
         run: |
           echo "${env:PYVERSION} - ${env:PYNAME} - ${env:PYARCH}"
           .\download.ps1
-          #7z a Python-${env:PYNAME}-${env:PYARCH}.zip Python-${env:PYNAME}-${env:PYARCH}
+          7z a Python-${env:PYNAME}-${env:PYARCH}.zip Python-${env:PYNAME}-${env:PYARCH}
           dir
           #cat install.log
         env:
@@ -54,4 +54,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Python-${{ matrix.version.PYNAME }}-${{ matrix.version.PYARCH }}
-          path: Python-${{ matrix.version.PYNAME }}-${{ matrix.version.PYARCH }}
+          path: Python-${{ matrix.version.PYNAME }}-${{ matrix.version.PYARCH }}.zip
