@@ -29,14 +29,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Define Env
-        shell: cmd
-        run: echo "%PYVERSION% - %PYNAME% - %PYARCH%"
+#      - name: Define Env
+#        shell: cmd
+#        run: echo "%PYVERSION% - %PYNAME% - %PYARCH%"
+#        env:
+#          PYVERSION: ${{ matrix.version.PYVERSION }}
+#          PYNAME: ${{ matrix.version.PYNAME }}
+#          PYARCH: ${{ matrix.version.PYARCH }}
+
+      - name: Run the build
+        shell: powershell
+        run: |
+          echo "${env:PYVERSION} - ${env:PYNAME} - ${env:PYARCH}"
+          .\download.ps1
+          dir
+          cat install.log
         env:
           PYVERSION: ${{ matrix.version.PYVERSION }}
           PYNAME: ${{ matrix.version.PYNAME }}
           PYARCH: ${{ matrix.version.PYARCH }}
-
-#      - name: Run the build
-#        run: .\download.ps1
-#        shell: powershell
