@@ -3,46 +3,14 @@ jobs:
 
   strategy:
     matrix:
-#      PY37_32:
-#        PYVERSION: 3.7.9
-#        PYARCH: 32
-#      PY37_64:
-#        PYVERSION: 3.7.9
-#        PYARCH: 64
-
-#      PY38_32:
-#        PYVERSION: 3.8.10
-#        PYARCH: 32
-#      PY38_64:
-#        PYVERSION: 3.8.10
-#        PYARCH: 64
-
-#      PY39_32:
-#        PYVERSION: 3.9.13
-#        PYNAME: 3.9.13
-#        PYARCH: 32
-#      PY39_64:
-#        PYVERSION: 3.9.13
-#        PYNAME: 3.9.13
-#        PYARCH: 64
-
-#      PY310_32:
-#        PYVERSION: 3.10.11
-#        PYNAME: 3.10.11
-#        PYARCH: 32
-#      PY310_64:
-#        PYVERSION: 3.10.11
-#        PYNAME: 3.10.11
-#        PYARCH: 64
-
-#      PY311_64:
-#        PYVERSION: 3.11.9
-#        PYNAME: 3.11.9
-#        PYARCH: 64
-
       PY312_64:
-        PYVERSION: 3.12.7
-        PYNAME: 3.12.7
+        PYVERSION: 3.12.9
+        PYNAME: 3.12.9
+        PYARCH: 64
+
+      PY313_64:
+        PYVERSION: 3.13.2
+        PYNAME: 3.13.2
         PYARCH: 64
 
   pool:
@@ -76,7 +44,7 @@ jobs:
   steps:
   - task: DownloadPipelineArtifact@1
 
-  - task: GithubRelease@0
+  - task: GithubRelease@1
     inputs:
       githubConnection: 'hho2002pat'
       assets: '$(System.ArtifactsDirectory)/**/*.zip'
