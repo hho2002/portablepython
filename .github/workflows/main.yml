@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  workflow_dispatch: # allows manual triggering
+    inputs:
+      create_release:
+        description: "Create new release"
+        required: true
+        type: boolean
+#  push:
+#    tags:
+#      - release-*
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        version:
+          - PYVERSION: 3.12.9
+            PYNAME: 3.12.9
+            PYARCH: 64
+
+          - PYVERSION: 3.13.2
+            PYNAME: 3.13.2
+            PYARCH: 64
+
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Define Env
+        env:
+          PYVERSION: ${{ matrix.version.PYVERSION }}
+          PYNAME: ${{ matrix.version.PYNAME }}
+          PYARCH: ${{ matrix.version.PYARCH }}
+        run: |
+          echo "$PYVERSION - $PYNAME - $PYARCH"
+
+#      - name: Run the build
+#        run: .\download.ps1
+#        shell: powershell
