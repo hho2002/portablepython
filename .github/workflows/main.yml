@@ -30,8 +30,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Define Env
-        run: |
-          echo "%PYVERSION% - %PYNAME% - %PYARCH%"
+        shell: cmd
+        run: echo "%PYVERSION% - %PYNAME% - %PYARCH%"
         env:
           PYVERSION: ${{ matrix.version.PYVERSION }}
           PYNAME: ${{ matrix.version.PYNAME }}
