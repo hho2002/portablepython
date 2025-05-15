@@ -16,12 +16,12 @@ jobs:
     strategy:
       matrix:
         version:
-          - PYVERSION: 3.12.9
-            PYNAME: 3.12.9
+          - PYVERSION: 3.12.10
+            PYNAME: 3.12.10
             PYARCH: 64
 
-          - PYVERSION: 3.13.2
-            PYNAME: 3.13.2
+          - PYVERSION: 3.13.3
+            PYNAME: 3.13.3
             PYARCH: 64
 
     runs-on: windows-latest
